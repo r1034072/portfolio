@@ -212,6 +212,40 @@ ul {
   outline-offset: 2px;
 }
 
+.social-nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.social-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.social-nav a:hover,
+.social-nav a:focus {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 @media (max-width: 768px) {
   body {
       grid-template-areas: 
@@ -238,6 +272,12 @@ ul {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .social-nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
   }
 }
 
@@ -301,4 +341,29 @@ ul {
 
 .contact-info img {
   width: 1rem;
+}
+
+.hobbys h2, .studies h2, .werkervaring h2 {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.hobbys p, .studies p, .werkervaring p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.over-mij section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.home section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
