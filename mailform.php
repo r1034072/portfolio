@@ -1,6 +1,6 @@
 <?php
 // Define the recipient email address
-$recipient_email = "your-email@example.com";
+$recipient_email = "r1034072@student.thomasmore.be";
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
