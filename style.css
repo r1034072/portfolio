@@ -1,0 +1,51 @@
+p {
+  font-size: 15px;
+  line-height: 18px;
+  color: #000a1e;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fa6432;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 18px;
+  color: #00283c;
+  font-weight: normal;
+}
+
+img {
+  float: left;
+  margin: 0 20px 20px 0;
+  max-height: 65px;
+}
+
+.profielfoto {
+  float: right;
+  margin: 0 20px 20px 0;
+  max-height: 150px;
+}
+
+a {
+  color: #fa6432;
+}
+
+body {
+  background-color: #e2e6bf;
+}
+
+header {
+  margin-bottom: 1.5rem;
+  margin-left: 15%;
+}
+
+main {
+  margin-left: 15%;
+  margin-top: 35px;
+}
