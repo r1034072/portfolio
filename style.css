@@ -1,51 +1,146 @@
-p {
-  font-size: 15px;
-  line-height: 18px;
-  color: #000a1e;
-  font-weight: 300;
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+} 
+
+:root {
+  --primary: #fa6432;
+  --secondary: #00283c;
+  --bg: #e2e6bf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 
+      "nav header"
+      "nav main";
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+nav {
+  grid-area: nav;
+  background-color: var(--secondary);
+  padding: 2rem;
+  color: white;
+  position: fixed;
+  height: 100vh;
+  width: 15rem;
+}
+
+.logo {
+  width: 100%;
+  max-width: 10rem;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+nav li {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--primary);
+}
+
+header {
+  grid-area: header;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-profielfoto {
+  height: 10rem;
+  background-color: #e2e6bf;
 }
 
 h1 {
   font-family: "Century Gothic", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  color: #fa6432;
+  font-size: 1.5rem;
+  color: var(--primary);
   font-weight: bold;
 }
 
 h2 {
-  font-size: 18px;
-  line-height: 18px;
-  color: #00283c;
-  font-weight: normal;
-}
-
-img {
-  float: left;
-  margin: 0 20px 20px 0;
-  max-height: 65px;
-}
-
-.profielfoto {
-  float: right;
-  margin: 0 20px 20px 0;
-  max-height: 150px;
-}
-
-a {
-  color: #fa6432;
-}
-
-body {
-  background-color: #e2e6bf;
-}
-
-header {
-  margin-bottom: 1.5rem;
-  margin-left: 15%;
+  font-size: 1.125rem;
+  color: var(--secondary);
 }
 
 main {
-  margin-left: 15%;
-  margin-top: 35px;
+  grid-area: main;
+  padding: 2rem;
+}
+
+section {
+  max-width: 50rem;
+  margin-bottom: 3rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  body {
+      grid-template-areas: 
+          "nav"
+          "header"
+          "main";
+      grid-template-columns: 1fr;
+  }
+
+  nav {
+      position: static;
+      height: auto;
+      width: 100%;
+  }
+
+  header {
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+  }
+
+  .nav-profielfoto {
+      max-width: 10rem;
+  }
 }
